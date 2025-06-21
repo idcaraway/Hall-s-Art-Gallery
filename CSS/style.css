@@ -1,0 +1,324 @@
+body {
+  font-family: Arial;
+  padding: 10px;
+  margin: 0;
+  margin: 0px;
+}
+
+.background-section {
+  background-image: url("../Images/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top 50px;
+  background-attachment: scroll; /* So it scrolls with page */
+  padding: 20px 10px; /* padding for spacing */
+  min-height: 100vh;
+}
+
+    .art { background: white; padding: 20px; margin: 10px auto; width: 300px; border-radius: 8px; box-shadow: 0 0 10px #ccc; flex: 0 1 calc(50% - 20px); box-sizing: border-box; }
+    .art img { width: 100%; }
+    .art h2 { margin-top: 10px; }
+    .buy-button { margin-top: 10px; }
+  
+  
+.profile-pic {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  margin:0 auto;
+  border-radius: 50%;
+}
+
+.profile-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 120px;
+  text-align: center;
+  z-index: 10;
+}
+
+.profile-info {
+  font-size: 12px;
+  color: #333;
+  margin-top: 2px;
+}
+
+.profile-pic img {
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+}
+    .gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+    }
+
+/* creating tabs*/
+
+/* Tab Menu */
+
+body.no-background {
+  background-image: none;
+  background-color: #f8f8f8; /* or any other background you prefer */
+}
+
+h1 {
+  text-align: center;
+  margin: 20px auto;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: xx-large;
+}
+
+p {
+  text-align: center;
+  margin: 20px auto;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: x-large;
+}
+
+.footer {
+  background-color: #e0e0e0; /* Light gray */
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+  margin-top: 0px;
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+  margin-top: 5px;
+  filter: grayscale(100%) brightness(0); /* Make icon black */
+  transition: filter 0.3s;
+}
+
+.social-icon:hover {
+  filter: none; /* On hover, show original color */
+}
+
+.contact-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.contact-container input,
+.contact-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.contact-container button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-container button:hover {
+  background-color: #0056b3;
+}
+
+html {
+  scroll-behavior: smooth; /* enables smooth scrolling */
+}
+
+/* Make full sections fill screen and fade in */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.full-section {
+  opacity: 0;
+  transform: translateY(50px);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
+}
+
+.full-section.visible {
+  animation: fadeUp 1s ease forwards;
+}
+
+/* When in view */
+.full-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Optional: style content inside the section */
+.section-content {
+  max-width: 800px;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* makes children stack vertically */
+  align-items: center;     /* centers horizontally */
+}
+.full-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid black; /* full-width line */
+  width: 100%;   /* makes the heading take full width */
+  box-sizing: border-box; /* ensures padding and border are included in width */
+}
+
+.section-content h2,
+.section-content p {
+  display: block;
+  width: 100%;
+}
+
+h1, h2 {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.hero-section {
+  height: 100vh;
+  background-color: #f4f4f4; /* You can change the background if needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #222;
+  text-align: center;
+  margin: 0;
+}
+
+.menu-container {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 15;
+}
+
+.menu-toggle {
+  width: 30px;
+  height: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 20;
+  background: none;     /* No background */
+  border: none;         /* No border */
+  padding: 0;           /* Remove padding */
+  margin: 0;            /* Remove margin */
+}
+
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #333;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle:hover span {
+  background-color: #007BFF;
+}
+
+.dropdown-menu {
+  display: none;
+  flex-direction: column;
+  background-color: white;
+  padding: 10px;
+  margin-top: 8px;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.dropdown-menu .tab-button {
+  background-color: #f0f0f0;
+  margin: 4px 0;
+  width: 150px;
+  text-align: left;
+}
+
+.dropdown-menu .tab-button:hover {
+  background-color: #ddd;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+#custom-section input,
+#custom-section textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+#custom-section button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#custom-section button:hover {
+  background-color: #0056b3;
+}
+
+.cart {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 300px;
+  max-height: 100vh;
+  background: white;
+  border-left: 1px solid #ccc;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+  padding: 20px;
+  z-index: 1000;
+  display: none;
+  overflow-y: auto;
+}
+.cart h2 {
+  margin-top: 0;
+}

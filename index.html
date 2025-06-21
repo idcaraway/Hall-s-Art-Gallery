@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Robert's Art Store</title>
+  <link rel="stylesheet" href="CSS/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
+<button onclick="toggleCart()" style="position:fixed; top:20px; right:80px; z-index:1001;">🛒 View Cart</button>
+<script src="https://www.paypal.com/sdk/js?client-id=AZfxvCD612tZmqdNMZxV-5GqENRT4gTp3je5xZgOQoND4Il4OyS9W989F-WKHA2f9knycOUdVOnMPXDH&currency=USD"></script>
+
+</head>
+<body>
+
+    
+<div class="profile-container">
+  <a href="about.html" class="profile-pic">
+    <img src="Images/Profile.jpg" alt="Profile Picture">
+  </a>
+  <div class="profile-info">
+    <h3>Robert Hall</h3>
+    <h3>Artist | Painter | Carver | CEO</h3>
+  </div>
+</div>
+
+
+  <h1>Hall's Originals Gallery</h1>
+
+<div class="menu-container">
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  <div class="dropdown-menu" id="dropdownMenu">
+    <button class="tab-button" onclick="showTab('paintings', event)">Paintings</button>
+<button class="tab-button" onclick="scrollToSection('about-section')">About</button>
+<button class="tab-button" onclick="scrollToSection('custom-section')">Custom painting</button>
+<button class="tab-button" onclick="scrollToSection('contact-section')">Contact</button>
+
+  </div>
+</div>
+
+
+<div class="gallery">
+  <div id="paintings" class="tab-content">
+<div class="art" data-name="A Girls Best Friend unframed 8x10" data-price="40.00">
+      <a href="Images/A girl's best friend.JPG" target="_blank">
+        <img src="images/A girl's best friend.JPG" alt="Van Gogh">
+      </a>
+      <h2>A Girls Best Friend unframed 8x10</h2>
+      <p>$40.00</p>
+      <button class="add-to-cart">Add to Cart</button>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="buy-button">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="idcaraway@aggies.ncat.edu.com">
+        <input type="hidden" name="item_name" value="Van Gogh">
+        <input type="hidden" name="amount" value="1.00">
+        <input type="hidden" name="currency_code" value="USD">
+        <input type="hidden" name="shipping" value="0.00">
+        <input type="submit" value="Buy Now with PayPal">
+      </form>
+    </div>
+
+<div class="art" data-name="After the flood unframed 18x24" data-price="65.00">
+      <a href="Images/After the flood.JPG" target="_blank">
+        <img src="Images/After the flood.JPG" alt="Black Woman">
+      </a>
+      <h2>After The Flood Print Unframed 18x24</h2>
+      <p>$65.00</p>
+      <button class="add-to-cart">Add to Cart</button>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="buy-button">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="isaiah23caraway@gmail.com">
+        <input type="hidden" name="item_name" value="Black Woman">
+        <input type="hidden" name="amount" value="75.00">
+        <input type="hidden" name="currency_code" value="USD">
+        <input type="hidden" name="shipping" value="12.00">
+        <input type="submit" value="Buy Now with PayPal">
+      </form>
+    </div>
+
+<div class="art" data-name=" Black Moses Real Wood Carving out of Exterior Plywood" data-price="35000.00">
+      <a href="Images/Black Moses.JPG" target="_blank">
+        <img src="Images/Black Moses.JPG" alt="Colorful Painting">
+      </a>
+      <h2>The Black Moses Real Wood Carving out of Exterior Plywood</h2>
+      <p>$35,000.00</p>
+      <button class="add-to-cart">Add to Cart</button>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="buy-button">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="isaiah23caraway@gmail.com">
+        <input type="hidden" name="item_name" value="Colorful Painting">
+        <input type="hidden" name="amount" value="75.00">
+        <input type="hidden" name="currency_code" value="USD">
+        <input type="hidden" name="shipping" value="12.00">
+        <input type="submit" value="Buy Now with PayPal">
+      </form>
+    </div>
+
+<div class="art" data-name=" Learning About Earning miniature unframed 5x7" data-price="10.00">
+      <a href="Images/Learning about earning.JPG" target="_blank">
+        <img src="Images/Learning about earning.JPG" alt="Forest Painting">
+      </a>
+      <h2>Learning About Earning miniature unframed 5x7</h2>
+      <p>$10.00</p>
+      <button class="add-to-cart">Add to Cart</button>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="buy-button">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="isaiah23caraway@gmail.com">
+        <input type="hidden" name="item_name" value="Forest Painting">
+        <input type="hidden" name="amount" value="75.00">
+        <input type="hidden" name="currency_code" value="USD">
+        <input type="hidden" name="shipping" value="12.00">
+        <input type="submit" value="Buy Now with PayPal">
+      </form>
+    </div>
+
+<div class="art" data-name=" The Man In The Mirror original oil painting on stretched canvas 16x20" data-price="1500.00">
+      <a href="Images/The man in the mirrior.JPG" target="_blank">
+        <img src="Images/The man in the mirrior.JPG" alt="Forest Painting">
+      </a>
+      <h2>The Man In The Mirror original oil painting on stretched canvas 16x20</h2>
+      <p>$1,500.00</p>
+      <button class="add-to-cart">Add to Cart</button>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="buy-button">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="isaiah23caraway@gmail.com">
+        <input type="hidden" name="item_name" value="Forest Painting">
+        <input type="hidden" name="amount" value="75.00">
+        <input type="hidden" name="currency_code" value="USD">
+        <input type="hidden" name="shipping" value="12.00">
+        <input type="submit" value="Buy Now with PayPal">
+      </form>
+    </div>
+
+<div class="art" data-name=" The Man In The Mirror unframed prints 5x7" data-price="10.00">
+      <a href="Images/The man in the mirrior.JPG" target="_blank">
+        <img src="Images/The man in the mirrior.JPG" alt="Forest Painting">
+      </a>
+      <h2>The Man In The Mirror unframed prints 5x7</h2>
+      <p>$10.00</p>
+      <button class="add-to-cart">Add to Cart</button>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="buy-button">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="isaiah23caraway@gmail.com">
+        <input type="hidden" name="item_name" value="Forest Painting">
+        <input type="hidden" name="amount" value="75.00">
+        <input type="hidden" name="currency_code" value="USD">
+        <input type="hidden" name="shipping" value="12.00">
+        <input type="submit" value="Buy Now with PayPal">
+      </form>
+    </div>
+
+<div class="art" data-name=" The Money Shot Framed 11x17" data-price="150.00">
+      <a href="Images/The money shot framed.JPG" target="_blank">
+        <img src="Images/The money shot framed.JPG" alt="Forest Painting">
+      </a>
+      <h2>The Money Shot Framed 11x17</h2>
+      <p>$150.00</p>
+      <button class="add-to-cart">Add to Cart</button>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="buy-button">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="isaiah23caraway@gmail.com">
+        <input type="hidden" name="item_name" value="Forest Painting">
+        <input type="hidden" name="amount" value="75.00">
+        <input type="hidden" name="currency_code" value="USD">
+        <input type="hidden" name="shipping" value="12.00">
+        <input type="submit" value="Buy Now with PayPal">
+      </form>
+    </div>
+
+<div class="art" data-name=" The Money Shot Unframed 11x17" data-price="40.00">
+      <a href="Images/The money shot unframed.JPG" target="_blank">
+        <img src="Images/The money shot unframed.JPG" alt="Forest Painting">
+      </a>
+      <h2>The Money Shot Unframed 11x17</h2>
+      <p>$40.00</p>
+      <button class="add-to-cart">Add to Cart</button>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="buy-button">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="isaiah23caraway@gmail.com">
+        <input type="hidden" name="item_name" value="Forest Painting">
+        <input type="hidden" name="amount" value="75.00">
+        <input type="hidden" name="currency_code" value="USD">
+        <input type="hidden" name="shipping" value="12.00">
+        <input type="submit" value="Buy Now with PayPal">
+      </form>
+    </div>
+
+<div class="art" data-name=" When The Spirit Hits Ya Pt1 11x17" data-price="30.00">
+      <a href="Images/When the spirit hitsya pt1.JPG" target="_blank">
+        <img src="Images/When the spirit hitsya pt1.JPG" alt="Forest Painting">
+      </a>
+      <h2>When The Spirit Hits Ya Pt1 11x17</h2>
+      <p>$30.00</p>
+      <button class="add-to-cart">Add to Cart</button>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="buy-button">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="isaiah23caraway@gmail.com">
+        <input type="hidden" name="item_name" value="Forest Painting">
+        <input type="hidden" name="amount" value="75.00">
+        <input type="hidden" name="currency_code" value="USD">
+        <input type="hidden" name="shipping" value="12.00">
+        <input type="submit" value="Buy Now with PayPal">
+      </form>
+    </div>
+
+<div class="art" data-name=" When The Spirit Hits Ya Pt2 unframed 11x17" data-price="45.00">
+      <a href="Images/When the spirits hits ya pt2.JPG" target="_blank">
+        <img src="Images/When the spirits hits ya pt2.JPG" alt="Forest Painting">
+      </a>
+      <h2>When The Spirit Hits Ya Pt2 unframed 11x17</h2>
+      <p>$45.00</p>
+      <button class="add-to-cart">Add to Cart</button>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="buy-button">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="isaiah23caraway@gmail.com">
+        <input type="hidden" name="item_name" value="Forest Painting">
+        <input type="hidden" name="amount" value="75.00">
+        <input type="hidden" name="currency_code" value="USD">
+        <input type="hidden" name="shipping" value="12.00">
+        <input type="submit" value="Buy Now with PayPal">
+      </form>
+    </div>
+
+<div class="art" data-name=" You Old Fish Eyed Fool 8x10" data-price="40.00">
+      <a href="Images/you old fish eyed fool.JPG" target="_blank">
+        <img src="Images/you old fish eyed fool.JPG" alt="Forest Painting">
+      </a>
+      <h2>You Old Fish Eyed Fool 8x10</h2>
+      <p>$40.00</p>
+      <button class="add-to-cart">Add to Cart</button>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="buy-button">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="isaiah23caraway@gmail.com">
+        <input type="hidden" name="item_name" value="Forest Painting">
+        <input type="hidden" name="amount" value="75.00">
+        <input type="hidden" name="currency_code" value="USD">
+        <input type="hidden" name="shipping" value="12.00">
+        <input type="submit" value="Buy Now with PayPal">
+      </form>
+    </div>
+
+  </div>
+</div>
+
+</div>
+<section class="hero-section full-section">
+  <div class="hero-content">
+    <h1>Where Art Finds a Home</h1>
+  </div>
+</section>
+
+<section id="about-section" class="full-section">
+  <div class="section-content">
+    <h2>About the Artist</h2>
+    <p>Robert Hall has been painting for as long as he can remember. His passion for art runs deep, and it’s reflected in every brushstroke of his work. Specializing in custom portraits, Robert captures more than just a likeness—he brings personality and soul to each piece.
+
+Beyond his canvas, Robert contributes to his community by painting large-scale murals throughout the city, turning everyday spaces into vibrant stories. He also shares his knowledge and passion with the next generation, teaching children how to draw and express themselves through art.
+
+Art is more than a profession for Robert—it’s a lifelong calling.</p>
+  </div>
+</section>
+
+
+<section id="custom-section" class="full-section">
+  <div class="section-content">
+    <h2>Request a Custom Painting</h2>
+    <p>Fill out the form below to request a custom piece. Robert will review your request and get in touch.</p>
+    <form action="mailto:roberthall@gmail.com" method="POST" enctype="text/plain">
+      <input type="text" name="Name" placeholder="Your Name" required><br>
+      <input type="email" name="Email" placeholder="Your Email" required><br>
+      <textarea name="Description" placeholder="Describe the painting you want" rows="5" required></textarea><br>
+      <button type="submit">Send Request</button>
+    </form>
+  </div>
+</section>
+
+<section id="contact-section" class="full-section">
+  <div class="section-content">
+    <h2>Contact US</h2>
+    <p>For questions, commissions, or custom orders, feel free to reach out:</p>
+    <p>Email: <a href="mailto:RobertHall@gmail.com">RobertHall@gmail.com</a></p>
+    <p>Phone: (555) 123-4567</p>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <p>© 2025 Robert Hall • All Rights Reserved • Contact: roberthall@gmail.com</p>
+  <a href=https://www.facebook.com/p/Robert-Hall-100009167617474/?_rdr target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" class="social-icon" />
+  </a>
+</footer>
+
+<div id="cart" class="cart">
+  <h2>Your Cart</h2>
+  <ul id="cart-items"></ul>
+  <p id="cart-total">Total: $0.00</p>
+  <div id="paypal-button-container" style="margin-top: 20px;"></div>
+
+  <button onclick="toggleCart()">Close</button>
+</div>
+<script src="scripts.js"></script>
+
+</body>
+</html>
