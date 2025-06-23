@@ -141,36 +141,38 @@ function renderPayPalButton() {
   }
 
   paypal.Buttons({
-    createOrder: function (data, actions) {
-      console.log("Creating order with items:", items, "total:", total);
-
-      const items = cart.map(item => ({
-        name: item.name,
-        unit_amount: {
-          currency_code: "USD",
-          value: item.price.toFixed(2)
-        },
-        quantity: item.quantity
-      }));
-
-      const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-
-      return actions.order.create({
-        purchase_units: [{
-          amount: {
-            currency_code: "USD",
-            value: total.toFixed(2),
-            breakdown: {
-              item_total: {
-                currency_code: "USD",
-                value: total.toFixed(2)
-              }
-            }
-          },
-          items: items
-        }]
-      });
+createOrder: function (data, actions) {
+  const items = cart.map(item => ({
+    name: item.name,
+    unit_amount: {
+      currency_code: "USD",
+      value: item.price.toFixed(2)
     },
+    quantity: item.quantity
+  }));
+
+  const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+
+  console.log("Creating order with items:", items, "total:", total);
+
+  return actions.order.create({
+    purchase_units: [{
+      amount: {
+        currency_code: "USD",
+        value: total.toFixed(2),
+        breakdown: {
+          item_total: {
+            currency_code: "USD",
+            value: total.toFixed(2)
+          }
+        }
+      },
+      items: items
+    }]
+  });
+},
+
+
     onApprove: function (data, actions) {
       return actions.order.capture().then(function (details) {
         alert("Transaction completed by " + details.payer.name.given_name);
