@@ -207,3 +207,26 @@ createOrder: function (data, actions) {
     }
   }).render("#paypal-button-container");
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Existing observer code here...
+
+  // Check for sold out items on page load
+  document.querySelectorAll(".art").forEach(art => {
+    const stock = parseInt(art.getAttribute("data-stock"));
+    if (stock === 0) {
+      art.classList.add("sold-out");
+
+      const addButton = art.querySelector(".add-to-cart");
+      if (addButton) {
+        addButton.disabled = true;
+        addButton.innerText = "Sold Out";
+      }
+
+      const buyForm = art.querySelector("form.buy-button");
+      if (buyForm) {
+        buyForm.remove();
+      }
+    }
+  });
+});
