@@ -322,3 +322,14 @@ h1, h2 {
 .cart h2 {
   margin-top: 0;
 }
+
+.sold-out {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.sold-out h2::after {
+  content: " (Sold Out)";
+  color: red;
+  font-weight: bold;
+}
