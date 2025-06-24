@@ -174,13 +174,33 @@ createOrder: function (data, actions) {
 
 
     onApprove: function (data, actions) {
-      return actions.order.capture().then(function (details) {
-        alert("Transaction completed by " + details.payer.name.given_name);
-        cart = [];
-        updateCartDisplay();
-        toggleCart();
+  return actions.order.capture().then(function (details) {
+    alert("Transaction completed by " + details.payer.name.given_name);
+
+    // Reduce stock for one-of-a-kind items
+    cart.forEach(item => {
+      const allArtItems = document.querySelectorAll(".art");
+      allArtItems.forEach(art => {
+        if (art.getAttribute("data-name") === item.name) {
+          let stock = parseInt(art.getAttribute("data-stock"));
+          if (stock === 1) {
+            art.classList.add("sold-out");
+            art.querySelector(".add-to-cart").disabled = true;
+            art.querySelector(".add-to-cart").innerText = "Sold Out";
+
+            const buyForm = art.querySelector("form.buy-button");
+            if (buyForm) buyForm.remove(); // remove PayPal button
+          }
+        }
       });
-    },
+    });
+
+    cart = [];
+    updateCartDisplay();
+    toggleCart();
+  });
+},
+
     onError: function (err) {
       console.error("PayPal Checkout Error:", err);
       alert("Something went wrong during checkout.");
