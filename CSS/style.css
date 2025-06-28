@@ -225,7 +225,7 @@ h1, h2 {
 .menu-toggle {
   width: 60px;
   height: 60px;
-  font: 32px;
+   font-size: 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
