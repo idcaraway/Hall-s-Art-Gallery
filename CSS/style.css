@@ -265,6 +265,7 @@ h1, h2 {
   margin: 4px 0;
   width: 150px;
   text-align: left;
+  font-size: 18px;
 }
 
 .dropdown-menu .tab-button:hover {
