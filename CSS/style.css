@@ -223,8 +223,9 @@ h1, h2 {
 }
 
 .menu-toggle {
-  width: 30px;
-  height: 24px;
+  width: 60px;
+  height: 60px;
+  font: 32px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
